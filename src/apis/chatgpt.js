@@ -15,3 +15,11 @@ export const generateData = (title) => {
       });
     return response      
 }
+
+
+export function createChatCompletion(messages) {
+  return openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages
+  })
+}

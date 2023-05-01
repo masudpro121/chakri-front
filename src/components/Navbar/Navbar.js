@@ -34,13 +34,13 @@ export default function Navbar() {
             </div>
             </Link>
 
-            <Link to="/" className='link'>
+            <Link to="/chatbot" className='link'>
               <div className='tab'>
                 <div className="icon">
                   <HiOutlineDocumentText />
                 </div>
                 <div className="text">
-                  Docs
+                  Chatbot
                 </div>
               </div>
             </Link>

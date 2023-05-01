@@ -256,7 +256,7 @@ const handleTest = () => {
         </div>
       </div>
       <div className='mt-4'>
-        <h3>Infographicer</h3>
+        <h3>Chakri</h3>
       </div>
         <div className='prompt mt-3 mb-4'>
           <h6 style={{width:'150px'}}>Project Name</h6>
@@ -305,7 +305,7 @@ const handleTest = () => {
         }
         {
           outputs.length > 0  && <div >
-          <PDFDownloadLink document={<GeneratePdf outputs={outputs} />} fileName={'Infographicer_'+new Date().toLocaleDateString()}> 
+          <PDFDownloadLink document={<GeneratePdf outputs={outputs} />} fileName={'Chakri_'+new Date().toLocaleDateString()}> 
           {({loading})=> <button>{loading?'Loading..':'Download PDF'}</button>}
           </PDFDownloadLink>
         </div>

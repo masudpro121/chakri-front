@@ -212,7 +212,7 @@ export const GeneratePdf = ({outputs}) => {
       <View style={styles.imgCont}>
         <Image style={styles.logo} src={Logo} />
           <View style={{fontSize:'30px', color: 'rgb(128, 105, 218,0.7)', marginTop: '20px'}}>
-            <Text>Infographicer</Text>
+            <Text>Chakri</Text>
         </View>
       </View>
       

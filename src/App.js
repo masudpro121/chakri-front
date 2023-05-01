@@ -8,6 +8,7 @@ import Projects from './pages/Projects/Projects';
 import Home from './pages/Home/Home';
 import { validate } from './apis/server';
 import { getCookie } from './utils/cookie';
+import Chatbot from './components/Chatbot/Chatbot';
 
 // Router 
 
@@ -31,6 +32,7 @@ function App() {
     { path: "/documentation", element: <GeneratePdfViewer/> },
     { path: "/signup", element: <Signup/> },
     { path: "/signin", element: <Signin/> },
+    { path: "/chatbot", element: <Chatbot/> },
     { path: "/projects", element: <Protected isLoggedIn={isLoggedIn}><Projects /></Protected> },
     { path: "/", element: <Protected isLoggedIn={isLoggedIn}><Home/></Protected> },
   ]);

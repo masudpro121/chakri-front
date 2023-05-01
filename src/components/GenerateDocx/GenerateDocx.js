@@ -19,7 +19,7 @@ export default function GenerateDocx({ outputs }) {
         // {
         //   children: [
         //     new Paragraph({
-        //       text: "Infographicer",
+        //       text: "Chakri",
         //       heading: HeadingLevel.TITLE,
         //       bold: true,
         //     }),
@@ -59,7 +59,7 @@ export default function GenerateDocx({ outputs }) {
     console.dir(doc)
     Packer.toBlob(doc).then((blob) => {
       console.log(blob);
-      saveAs(blob, `Infographicer_${new Date().toLocaleDateString()}.docx`);saveAs(blob, `Infographicer_${new Date().toLocaleDateString()}.docx`);
+      saveAs(blob, `Chakri_${new Date().toLocaleDateString()}.docx`);saveAs(blob, `Chakri_${new Date().toLocaleDateString()}.docx`);
       console.log("Document created successfully");
     });
   };
@@ -110,7 +110,7 @@ export default function GenerateDocx({ outputs }) {
 //       {
 //         children: [
 //           new Paragraph({
-//             text: "Infographicer",
+//             text: "Chakri",
 //             heading: HeadingLevel.TITLE,
 //             bold: true,
 //           }),
