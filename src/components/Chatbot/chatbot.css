@@ -10,6 +10,7 @@
     background: var(--primaryGradient);
     color: #f1f5f9;
     height: 80vh;
+    width: 360px;
     border-radius: 5px;
     padding: 0;
     padding-left: 4px;

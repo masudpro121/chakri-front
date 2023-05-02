@@ -78,7 +78,7 @@ export const Signup =()=> {
                 </div>
             </div>
             <div className="mybtn">
-                <button onClick={debounce(handleSignup, 500)}>Create an account</button>
+                <button onClick={debounce(handleSignup, 300)}>Create an account</button>
             </div>
             <div className="f-auth mt-3">
                 <div >
@@ -156,7 +156,7 @@ export const Signin =()=> {
                     <input id="password" type="password"  onChange={e=>setPassword(e.target.value)} />
                 </div>
             
-            <div className="mybtn" onClick={debounce(handleLogin, 500)}>
+            <div className="mybtn" onClick={debounce(handleLogin, 300)}>
                 <button >Sign in</button>
             </div>
             </div>

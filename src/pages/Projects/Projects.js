@@ -294,7 +294,7 @@ const handleTest = () => {
         </div>
         <div className='other-btns'>
         {
-          outputs.length > 0  && <button onClick={debounce(handleSave, 500)}>Save</button>
+          outputs.length > 0  && <button onClick={debounce(handleSave, 300)}>Save</button>
         }
         {
           outputs.length > 0  && <GenerateDocx outputs={outputs} />
