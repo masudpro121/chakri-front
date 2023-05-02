@@ -105,9 +105,14 @@
 
 
 
-
-
-/* ----------------------  */
-
-
-/* ----------------------  */
+.editable textarea{
+    width: 100%;
+    min-height: 150px;
+    padding: 10px
+}
+.editable textarea:focus{
+    border: none;
+    outline: none;
+    border: 1px solid #04756f;
+    border-radius: 10px;
+}

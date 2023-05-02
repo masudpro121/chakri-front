@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import "./navbar.css"
 import Logo from "../../assets/img/logo.png"
 import { BiHomeSmile } from 'react-icons/bi';
-import { HiOutlineDocumentText } from 'react-icons/hi';
+import { TbMessageChatbot } from 'react-icons/tb';
 import { IoIosLogOut } from 'react-icons/io';
-import { MdMiscellaneousServices, MdOutlinePrivacyTip } from 'react-icons/md';
+import { MdMiscellaneousServices } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
 import RocketImg from '../../assets/img/rocket.png'
 import { MyContext } from '../../App';
@@ -34,18 +34,6 @@ export default function Navbar() {
             </div>
             </Link>
 
-            <Link to="/chatbot" className='link'>
-              <div className='tab'>
-                <div className="icon">
-                  <HiOutlineDocumentText />
-                </div>
-                <div className="text">
-                  Chatbot
-                </div>
-              </div>
-            </Link>
-           
-            
             <Link to="/projects" className='link'>
             <div className='tab'>
               <div className="icon">
@@ -56,13 +44,14 @@ export default function Navbar() {
               </div>
             </div>
             </Link>
-            <Link to="/" className='link'>
+            
+            <Link to="/chatbot" className='link'>
               <div className='tab'>
                 <div className="icon">
-                  <MdOutlinePrivacyTip />
+                  <TbMessageChatbot />
                 </div>
                 <div className="text">
-                  Privacy
+                  Chatbot
                 </div>
               </div>
             </Link>

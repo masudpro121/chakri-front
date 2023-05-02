@@ -10,10 +10,28 @@ import { MyContext } from "../../App";
 function Card({ data: { id, prompt, value } }) {
   const { outputs, setOutputs } = useContext(MyContext);
   const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
+  const [isEditable, setIsEditable] = useState(false);
+  const [val, setVal] =useState(value)
+  const handleClose = () =>{
+    setShow(false)
+    setIsEditable(false)
+    const myoutputs = outputs.map(o=>{
+      if(o.id==id){
+        const op = {...o, value: val}
+        return op
+      }else{
+        return o
+      }
+    })
+    setOutputs(myoutputs)
+  };
   const handleShow = () => setShow(true);
+ 
 
+  const handleEditable = () => {
+    setIsEditable(true);
+    setVal(value)
+  }
   const shortPrompt = prompt.slice(0, 100);
   const shortValue = value?.slice(0, 150);
 
@@ -50,35 +68,48 @@ function Card({ data: { id, prompt, value } }) {
           </div>
         </div>
 
-        <Modal className="mymodal"  size="lg" show={show} onHide={handleClose} centered>
-          <Modal.Body className="modal-body" >
+        <Modal
+          className="mymodal"
+          size="lg"
+          show={show}
+          onHide={handleClose}
+          centered
+        >
+          <Modal.Body className="modal-body">
             <h5 className="modal-head">{prompt}</h5>
             <div className="modal-inner">
-            
-            {window.innerWidth < 527 && <pre>{wordwrap(38)(value)}</pre>}
-                {window.innerWidth > 527 && window.innerWidth < 992 && (
-                  <pre>{wordwrap(55)(value)}</pre>
-                )}
-                {window.innerWidth > 991 && <pre>{wordwrap(90)(value)}</pre>}
-                <div className="mt-5">
-                  {/* <div className="d-flex gap-2 justify-content-end mb-3 ">
-                    <button>Previous Card</button>
-                    <button>Next Card</button>
-                  </div> */}
-
-                  <div className="d-flex gap-2 flex-wrap  justify-content-end">
-                    {/* <button>Grammar check</button>
-                    <button>Regenerate</button>
-                    <button>Summarize</button>
-                    <button>Paraphrase</button>
-                    <button>Translate</button> */}
-                    <button>Delete</button>
-                    <button>Edit</button>
-                    <button onClick={handleCopy}>Copy text</button>
-                    <button onClick={handleClose}>Close</button>
-                  </div>
+              {
+                !isEditable && 
+                <div>
+                  {window.innerWidth < 527 && <pre>{wordwrap(38)(value)}</pre>}
+                  {window.innerWidth > 527 && window.innerWidth < 992 && (
+                    <pre>{wordwrap(55)(value)}</pre>
+                  )}
+                  {window.innerWidth > 991 && <pre>{wordwrap(90)(value)}</pre>}
+                  <div className="mt-5">
+                <div className="d-flex gap-2 flex-wrap  justify-content-end">
+                  <button onClick={handleEditable}>Edit</button>
+                  <button onClick={handleCopy}>Copy text</button>
+                  <button onClick={handleClose}>Close</button>
                 </div>
-            </div>    
+              </div>
+              </div>
+              }
+
+              {
+                isEditable && 
+                <div className="editable">
+                  <textarea onChange={e=>setVal(e.target.value)} value={val}></textarea>
+                  <div className="mt-3">
+                <div className="d-flex gap-2 flex-wrap  justify-content-end">
+                  <button onClick={handleClose}>Close</button>
+                </div>
+              </div>
+                </div>
+              }
+
+              
+            </div>
           </Modal.Body>
         </Modal>
       </>
