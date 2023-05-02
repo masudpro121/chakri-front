@@ -3,7 +3,7 @@
     color: black
 }
 .mynav{
-    background: linear-gradient(to bottom, #251237 , #322b38 );
+    background: var(--primaryGradient);
     position: relative;
     min-height: 100vh;
 }
@@ -25,7 +25,7 @@
 }
 
 .mynav svg{
-    color: #959BA5;
+    color: var(--bgColor);
     font-size: 1.4rem;
 }
 

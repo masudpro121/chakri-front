@@ -5,7 +5,8 @@
   --textColor2: #f0f5f0;
   --primary-color: #7b0e9c86;
   --secondaryColor: #959BA5;
-  --primaryGradient: linear-gradient(to right,  #cb7cd0 , #8069da);
+  --primaryGradient: linear-gradient(110deg, #04756f, #013532f5);
+  --secondaryGradient: linear-gradient(to left, #03524e, #013532);
   --primary-font: 'Poppins', sans-serif;
 }
  * {

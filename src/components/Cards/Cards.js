@@ -61,20 +61,19 @@ function Card({ data: { id, prompt, value } }) {
                 )}
                 {window.innerWidth > 991 && <pre>{wordwrap(90)(value)}</pre>}
                 <div className="mt-5">
-                  <div className="d-flex gap-2 justify-content-end mb-3 ">
+                  {/* <div className="d-flex gap-2 justify-content-end mb-3 ">
                     <button>Previous Card</button>
                     <button>Next Card</button>
-                  </div>
+                  </div> */}
 
                   <div className="d-flex gap-2 flex-wrap  justify-content-end">
-                    <button>Grammar check</button>
+                    {/* <button>Grammar check</button>
                     <button>Regenerate</button>
                     <button>Summarize</button>
                     <button>Paraphrase</button>
-                    <button>Translate</button>
+                    <button>Translate</button> */}
                     <button>Delete</button>
-                    <button>Edit text</button>
-                    <button>Save as later</button>
+                    <button>Edit</button>
                     <button onClick={handleCopy}>Copy text</button>
                     <button onClick={handleClose}>Close</button>
                   </div>

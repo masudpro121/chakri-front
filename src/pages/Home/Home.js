@@ -11,6 +11,7 @@ import { getCookie } from '../../utils/cookie'
 
 function Home() {
   const [projects, setProjects] = useState([])
+  console.log(projects, 'projects');
   const {currentProjectPage, setIsLoggedIn, isLoggedIn} = useContext(MyContext)
   useEffect(()=>{
     getProjects()
@@ -83,7 +84,7 @@ console.log(isLoggedIn, 'isLoggedin');
         <button>Create new project</button>
         </Link>
       </div>
-      <div className='search'>
+      {/* <div className='search'>
           <div>
             <input type="text" placeholder='Search by project name' />
           </div>
@@ -105,7 +106,7 @@ console.log(isLoggedIn, 'isLoggedin');
         <div>
           <button>Search</button>
         </div>
-      </div>
+      </div> */}
      
       {/* <Cards data={myprojects}/> */}
       <div className="p-cards">
