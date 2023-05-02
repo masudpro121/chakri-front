@@ -11,7 +11,6 @@ import { getCookie } from '../../utils/cookie'
 
 function Home() {
   const [projects, setProjects] = useState([])
-  console.log(projects, 'projects');
   const {currentProjectPage, setIsLoggedIn, isLoggedIn} = useContext(MyContext)
   useEffect(()=>{
     getProjects()
@@ -75,7 +74,6 @@ function Home() {
   const myprojects = projects.slice((currentProjectPage*perPageItem)-perPageItem, currentProjectPage*perPageItem)
 
   
-console.log(isLoggedIn, 'isLoggedin');
   return (
     <div className='home'>
       <div className='top'>
